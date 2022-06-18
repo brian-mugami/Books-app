@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{%block title%} All Read Books {%endblock%}
+{%block content%}
+<h1 align="center">All books </h1>
+<br />
+
+    {% for book in books %}
+    <div class="shadow p-3 mb-5 bg-body rounded">
+    <li class="list-group-item">{{book.Book_name}} by {{book.Book_author}}</li>
+   </div>
+   <br />
+    {% endfor %}
+
+{% endblock %}
+</ul>

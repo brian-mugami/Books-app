@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{%block title%} Read Books {%endblock%}
+{%block content%}
+<h1 align="center"> Books Read </h1>
+<ul class="list-group list-group-flush" id="books">
+    {% for book in user.books %}
+    <li class="list-group-item">{{book.Book_name}} by {{book.Book_author}} added on {{book.date_added}}</li>
+    {% endfor%}
+{% endblock %}
+</ul>

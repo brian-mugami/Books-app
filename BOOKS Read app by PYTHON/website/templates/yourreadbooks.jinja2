@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{%block title%} Your Read Books {%endblock%}
+{%block content%}
+<h1 align="center"> Your Read  Books </h1><a href = "{{ url_for('views.add_book')}} ">Add Book</a>
+<br />
+    {% for book in user.books %}
+    <div class="shadow p-3 mb-5 bg-body rounded">
+    <li class="list-group-item">{{book.Book_name}} by {{book.Book_author}}</li><button type="button" class="close" onClick="deleteNote({{ book.ID }})">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+<br />
+{% endfor %}
+
+{% endblock %}
+</ul>

@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% block title %} Search Page {% endblock%}
+{% block content%}
+<br />
+<h3> Search Results </h3>
+   {% for book in books%}
+         {% if book%}
+           <div class="shadow p-3 mb-5 bg-body rounded">
+           <li class="list-group-item">{{ book.Book_name }} by {{book.Book_author}}</li>
+         {% else%}
+            <p>You have not read that book!!!</p>
+            </div>
+            <br />
+        {%endif%}
+
+   {% endfor %}
+</p>
+{% endblock %}
