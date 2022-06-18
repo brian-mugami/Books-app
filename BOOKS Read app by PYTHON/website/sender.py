@@ -17,5 +17,3 @@ def sender(e):
           smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
           smtp.send_message(email)
 
-
-sender("brianmugz1@gmail.com")
